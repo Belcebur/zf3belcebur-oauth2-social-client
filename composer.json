@@ -1,0 +1,35 @@
+{
+  "name": "zf3belcebur/oauth2-social-client",
+  "description": "ZF3 extends module from thephpleague/oauth2-client",
+  "type": "library",
+  "require": {
+    "php": "^7.1",
+    "league/oauth2-client": "2.*"
+  },
+  "suggest": {
+    "zf3belcebur/doctrine-orm-resources": "DoctrineORM Resources to ZF3",
+    "zf3belcebur/materialize-css-helper": "MaterializeCss Helper integration to ZF3",
+    "zf3belcebur/mongodb-logger": "MongoDb Logger integration to ZF3",
+    "zendframework/zend-mvc-plugin-flashmessenger": "Recommended to display provider response messages",
+    "league/oauth2-facebook": "facebook provider",
+    "league/oauth2-github": "github provider",
+    "league/oauth2-google": "google provider",
+    "league/oauth2-instagram": "instagram provider",
+    "stevenmaguire/oauth2-microsoft": "microsoft provider",
+    "league/oauth2-linkedin": "linkedin provider"
+  },
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "David Garcia",
+      "email": "garcia.gordo.david@gmail.com",
+      "homepage": "https://github.com/Belcebur"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "ZF3Belcebur\\OAuth2SocialClient\\": "src/"
+    }
+  }
+}

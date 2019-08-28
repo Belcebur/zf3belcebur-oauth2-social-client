@@ -1,0 +1,104 @@
+<?php
+
+namespace ZF3Belcebur\OAuth2SocialClient;
+
+return [
+	__NAMESPACE__ => [
+        'facebook'  => [
+            'factory-data'             => [
+                'class'         => \League\OAuth2\Client\Provider\Facebook::class, // se others in https://github.com/thephpleague/oauth2-client/blob/master/docs/providers/thirdparty.md
+                // redirectUri -> Url Option
+                'callbackRoute' => 'https://www.google.es/callback',
+            ],
+            'provider-data'            => [
+                // See provider info in  https://github.com/thephpleague/oauth2-client
+                'clientId'        => 'xxx-your-client-id-xxx',
+                'clientSecret'    => 'xxx-your-client-secret-xxx',
+                'graphApiVersion' => 'v3.0',
+                // other provider data
+            ],
+            'authorization-url-params' => [
+                'approval_prompt' => 'force', //forzar pantalla
+                'scope'           => [
+                    'public_profile',
+                    'email',
+                    'user_birthday',
+                    'user_gender',
+                    'user_link',
+                    'user_location',
+                    'user_hometown',
+                ],
+            ],
+        ],
+        'google'    => [
+            'factory-data'  => [
+                'class'         => \League\OAuth2\Client\Provider\Google::class,
+                'callbackRoute' => [
+                    'name'   => 'belcebur-social',
+                    'params' => [ 'action' => 'google' ],
+                ],
+            ],
+            'provider-data' => [
+                'clientId'        => 'xxx-your-client-id-xxx',
+                'clientSecret'    => 'xxx-your-client-secret-xxx',
+            ],
+        ],
+        'intranet'  => [
+            'factory-data'             => [
+                'class'         => \League\OAuth2\Client\Provider\Google::class,
+                'callbackRoute' => [
+                    'name'   => 'belcebur-social',
+                    'params' => [ 'action' => 'intranet' ],
+                ],
+            ],
+            'provider-data'            => [
+                'clientId'        => 'xxx-your-client-id-xxx',
+                'clientSecret'    => 'xxx-your-client-secret-xxx',
+                'hostedDomain' => 'example.com',
+            ],
+            'authorization-url-params' => [
+                //'approval_prompt' => 'force', //forzar pantalla
+                'scope' => [
+                    'email',
+                    'openid',
+                    'profile',
+                    'https://mail.google.com/',
+                ],
+            ],
+        ],
+        'linkedin'  => [
+            'factory-data'  => [
+                'class'         => \League\OAuth2\Client\Provider\LinkedIn::class,
+                'callbackRoute' => [
+                    'name'   => 'belcebur-social',
+                    'params' => [ 'action' => 'linkedin' ],
+                ],
+            ],
+            'provider-data' => [
+                'clientId'        => 'xxx-your-client-id-xxx',
+                'clientSecret'    => 'xxx-your-client-secret-xxx',
+            ],
+
+        ],
+        'microsoft' => [
+            'factory-data'             => [
+                'class'         => \Stevenmaguire\OAuth2\Client\Provider\Microsoft::class,
+                'callbackRoute' => [
+                    'name'   => 'belcebur-social',
+                    'params' => [ 'action' => 'microsoft' ],
+                ],
+            ],
+            'provider-data'            => [
+                'clientId'        => 'xxx-your-client-id-xxx',
+                'clientSecret'    => 'xxx-your-client-secret-xxx',
+            ],
+            'authorization-url-params' => [
+                'scope' => [
+                    'wl.basic',
+                    'wl.signin',
+                    'wl.emails',
+                ],
+            ],
+        ],
+    ],
+];
