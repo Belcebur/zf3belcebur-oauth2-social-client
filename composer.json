@@ -1,6 +1,23 @@
 {
   "name": "zf3belcebur/oauth2-social-client",
   "description": "ZF3 extends module from thephpleague/oauth2-client",
+  "keywords": [
+    "phpleague",
+    "ZF3",
+    "oAuth2",
+    "Service",
+    "Zend",
+    "Provider",
+    "View Helper",
+    "View",
+    "Controller Plugin",
+    "Plugin",
+    "Social",
+    "Facebook",
+    "Google",
+    "Microsoft",
+    "Linkedin"
+  ],
   "type": "library",
   "require": {
     "php": "^7.1",
@@ -10,6 +27,7 @@
     "zf3belcebur/doctrine-orm-resources": "DoctrineORM Resources to ZF3",
     "zf3belcebur/materialize-css-helper": "MaterializeCss Helper integration to ZF3",
     "zf3belcebur/mongodb-logger": "MongoDb Logger integration to ZF3",
+    "zf3belcebur/mvc-basic-tools": "ZF3 tools for controllers,views,helpers, plugins and more ...",
     "zendframework/zend-mvc-plugin-flashmessenger": "Recommended to display provider response messages",
     "league/oauth2-facebook": "facebook provider",
     "league/oauth2-github": "github provider",
