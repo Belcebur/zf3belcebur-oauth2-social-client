@@ -69,7 +69,7 @@ class OAuth2SocialService
      */
     public function getAll(): array
     {
-        return $this->all;
+        return $this->all ?? [];
     }
 
     /**
